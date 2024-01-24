@@ -7,7 +7,7 @@ RUN mkdir ~/.vnc /app
 RUN x11vnc -storepasswd 1234 ~/.vnc/passwd
 COPY entrypoint.sh /entrypoint.sh
 RUN mkdir /opt/app
-ADD https://github.com/freerouting/freerouting/releases/download/v1.9.0/freerouting-1.9.0.jar /opt/app
+ADD https://github.com/freerouting/freerouting/releases/download/v1.9.0/freerouting-1.9.0.jar /opt/app/freerouting.jar
 RUN chmod +x entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
