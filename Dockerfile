@@ -10,6 +10,6 @@ RUN mkdir /opt/app
 ADD https://github.com/freerouting/freerouting/releases/download/v1.9.0/freerouting-1.9.0.jar /opt/app/freerouting.jar
 RUN chmod +x entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
-
+# ENTRYPOINT [xvfb-run -a java -jar /opt/app/freerouting.jar]
 # docker build . -f Dockerfile-fakex11 -t woodenstake/freeroutingx11:v1.8.0
 # https://stackoverflow.com/questions/73209656/java-awt-headlessexception-no-x11-display-variable-was-set-but-this-program-pe
